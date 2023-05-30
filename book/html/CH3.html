@@ -158,7 +158,7 @@
 </li>
 <li>重叠解释
 <ul>
-<li>在解释第k条指令的操作完成之前，就可开始解释第k+1条指令</li>
+<li>在解释第 k 条指令的操作完成之前，就可开始解释第 k+1 条指令</li>
 </ul>
 </li>
 <li>相同：每一条指令的实现速度相同</li>
@@ -186,10 +186,10 @@
 <ul>
 <li>操作数和指令分存于两个独立编址且可同时访问的存储器</li>
 <li>采用多体交叉主存结构</li>
-<li>增设指令缓冲寄存器（如果每次都可以从指缓中取得指令，则“取指k+1”的时间很短，就可把这个微操作合并到“分析k+1”内，则可将原先的重叠变成只是“分析k+1”与“执行k”的重叠）
-<img src="pic/3-1.bmp" alt="" /></li>
+<li>增设指令缓冲寄存器（如果每次都可以从指缓中取得指令，则“取指k+1”的时间很短，就可把这个微操作合并到“分析k+1”内，则可将原先的重叠变成只是“分析k+1”与“执行k”的重叠）</li>
 </ul>
 </li>
+<li><img src="pic/3-1.bmp" alt="" /></li>
 </ul>
 </li>
 <li>在硬件上保证有独立的指令分析部件和指令执行部件；
@@ -331,7 +331,7 @@
 </li>
 <li>各功能段时间相等：
 <ul>
-<li><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.2154em;vertical-align:-0.52em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6954em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span><span class="mclose mtight">)</span><span class="mord mtight">Δ</span><span class="mord mathnormal mtight">t</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
+<li><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.2154em;vertical-align:-0.52em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6954em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span><span class="mclose mtight">)</span><span class="mord mtight">Δ</span><span class="mord mathnormal mtight">t</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
 <li><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">/</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span></li>
 </ul>
 </li>
@@ -343,8 +343,8 @@
 </li>
 <li>效率：在整个运行时间里，有多少时间流水线设备真正用于工作。是实际使用时间占整个运行时间之比（n个任务的时空区面积/k个段的总时空面积）
 <ul>
-<li>如果是k段线性流水线，且各段经过时间相同，则在T时间里，流水线各段的效率都相同
-<img src="pic/3-3.bmp" alt="" /></li>
+<li>如果是k段线性流水线，且各段经过时间相同，则在T时间里，流水线各段的效率都相同</li>
+<li><img src="pic/3-3.bmp" alt="" /></li>
 <li>整个流水线的效率：</li>
 <li><img src="pic/3-4.bmp" alt="" /></li>
 <li>对于线性流水且每段经过时间相等时，流水线的效率正比于吞吐率</li>
@@ -358,8 +358,7 @@
 </ul>
 <p><strong>流水线的相关处理（选择、填空）</strong></p>
 <ul>
-<li>
-<p>局部性相关（数据相关）：指令相关、主存数相关和寄存器组数相关</p>
+<li>局部性相关（数据相关）：指令相关、主存数相关和寄存器组数相关
 <ul>
 <li>处理：
 <ul>
@@ -374,8 +373,7 @@
 </li>
 </ul>
 </li>
-<li>
-<p>全局性相关（转移相关）：转移指令引起流水线中已被解释的指令作废</p>
+<li>全局性相关（转移相关）：转移指令引起流水线中已被解释的指令作废
 <ul>
 <li>处理：
 <ul>
@@ -402,25 +400,22 @@
 </li>
 </ul>
 </li>
-<li>
-<p>顺序/同步流动方式：任务流出流水线的顺序与流入顺序一致。</p>
+<li>顺序/同步流动方式：任务流出流水线的顺序与流入顺序一致。
 <ul>
 <li>实质：推后读</li>
 </ul>
 </li>
-<li>
-<p>异步流动方式：任务流出流水线的顺序与流入顺序不同。</p>
-</li>
-<li>
-<p>可能出现的新相关：</p>
+<li>异步流动方式：任务流出流水线的顺序与流入顺序不同。</li>
+<li>可能出现的新相关：
 <ul>
 <li>“写-写”相关：如：i，k指令都要写入同一单元，避免最终出现k先写入而i后写入</li>
 <li>“先读后写”相关：如：避免最终出现l的读操作落后于m的写操作。</li>
 </ul>
 </li>
-<li>
-<p>sum:采用总线式分布式控制管理，进一步优化处理标量流水处理机的局部相关问题
-<img src="pic/3-11.bmp" alt="" /></p>
+<li>sum:采用总线式分布式控制管理，进一步优化处理标量流水处理机的局部相关问题
+<ul>
+<li><img src="pic/3-11.bmp" alt="" /></li>
+</ul>
 </li>
 </ul>
 <p><strong>单功能非线性流水线的调度（简答）</strong></p>
@@ -436,12 +431,12 @@
 <li>根据预约表写出延迟禁止表F(预约表中所有同一行中任意两个“X”间的距离)</li>
 <li>由延迟禁止表形成冲突向量C（冲突向量长度等于禁止向量中的最大值，由高到低）</li>
 <li>由所有的向量图画出状态图（注意所有状态经过m*均可到达初始状态，m为禁止向量最大值）</li>
-<li>由状态图形成最佳调度方案（所有闭合回路均为调度周期策略，找出其中平均启动距离最小的）
-<img src="pic/3-13.bmp" alt="" />
-<img src="pic/3-14.bmp" alt="" />
-<img src="pic/3-17.bmp" alt="" />
-<img src="pic/3-15.bmp" alt="" />
-<img src="pic/3-16.bmp" alt="" /></li>
+<li>由状态图形成最佳调度方案（所有闭合回路均为调度周期策略，找出其中平均启动距离最小的）</li>
+<li><img src="pic/3-13.bmp" alt="" /></li>
+<li><img src="pic/3-14.bmp" alt="" /></li>
+<li><img src="pic/3-17.bmp" alt="" /></li>
+<li><img src="pic/3-15.bmp" alt="" /></li>
+<li><img src="pic/3-16.bmp" alt="" /></li>
 </ul>
 </li>
 </ul>

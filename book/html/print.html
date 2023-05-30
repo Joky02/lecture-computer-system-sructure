@@ -473,20 +473,14 @@
 </ul>
 <p><strong>RISC 采用的基本技术（简答、选择）；</strong></p>
 <ul>
-<li>
-<p>遵循按RISC机器一般原则设计的技术。</p>
-</li>
-<li>
-<p>在逻辑上采用硬联实现和微程序固件实现相结合的技术。大多数简单指令用硬连线方式实现，功能较复杂的指令用微程序解释实现。</p>
-</li>
-<li>
-<p>在CPU中设置数量较大的寄存器组， 并采用重叠寄存器窗口的技术。</p>
-</li>
+<li>遵循按RISC机器一般原则设计的技术。</li>
+<li>在逻辑上采用硬联实现和微程序固件实现相结合的技术。大多数简单指令用硬连线方式实现，功能较复杂的指令用微程序解释实现。</li>
+<li>在CPU中设置数量较大的寄存器组， 并采用重叠寄存器窗口的技术。</li>
 </ul>
-<p><strong>重叠寄存器窗口（选择）</strong>
-<img src="pic/2-1.bmp" alt="" />
-<img src="pic/2-2.bmp" alt="" /></p>
+<p><strong>重叠寄存器窗口（选择）</strong></p>
 <ul>
+<li><img src="pic/2-1.bmp" alt="" /></li>
+<li><img src="pic/2-2.bmp" alt="" /></li>
 <li>效果：大量减少了原先由于程序调用引起的访存的次数</li>
 <li>在主存中开辟堆栈，当调用的进程数（层数）超过规定层数时（寄存器溢出），则将溢出的部分压入堆栈中</li>
 <li>SUN公司的SPARC、SuperSPARC等处理机，将最后一个过程与第一个过程的公用存储器重叠起来，从而形成一个循环圈</li>
@@ -508,7 +502,7 @@
 </li>
 <li>重叠解释
 <ul>
-<li>在解释第k条指令的操作完成之前，就可开始解释第k+1条指令</li>
+<li>在解释第 k 条指令的操作完成之前，就可开始解释第 k+1 条指令</li>
 </ul>
 </li>
 <li>相同：每一条指令的实现速度相同</li>
@@ -536,10 +530,10 @@
 <ul>
 <li>操作数和指令分存于两个独立编址且可同时访问的存储器</li>
 <li>采用多体交叉主存结构</li>
-<li>增设指令缓冲寄存器（如果每次都可以从指缓中取得指令，则“取指k+1”的时间很短，就可把这个微操作合并到“分析k+1”内，则可将原先的重叠变成只是“分析k+1”与“执行k”的重叠）
-<img src="pic/3-1.bmp" alt="" /></li>
+<li>增设指令缓冲寄存器（如果每次都可以从指缓中取得指令，则“取指k+1”的时间很短，就可把这个微操作合并到“分析k+1”内，则可将原先的重叠变成只是“分析k+1”与“执行k”的重叠）</li>
 </ul>
 </li>
+<li><img src="pic/3-1.bmp" alt="" /></li>
 </ul>
 </li>
 <li>在硬件上保证有独立的指令分析部件和指令执行部件；
@@ -681,7 +675,7 @@
 </li>
 <li>各功能段时间相等：
 <ul>
-<li><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.2154em;vertical-align:-0.52em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6954em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span><span class="mclose mtight">)</span><span class="mord mtight">Δ</span><span class="mord mathnormal mtight">t</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
+<li><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.2154em;vertical-align:-0.52em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6954em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">+</span><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span><span class="mclose mtight">)</span><span class="mord mtight">Δ</span><span class="mord mathnormal mtight">t</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
 <li><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">/</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span></li>
 </ul>
 </li>
@@ -693,8 +687,8 @@
 </li>
 <li>效率：在整个运行时间里，有多少时间流水线设备真正用于工作。是实际使用时间占整个运行时间之比（n个任务的时空区面积/k个段的总时空面积）
 <ul>
-<li>如果是k段线性流水线，且各段经过时间相同，则在T时间里，流水线各段的效率都相同
-<img src="pic/3-3.bmp" alt="" /></li>
+<li>如果是k段线性流水线，且各段经过时间相同，则在T时间里，流水线各段的效率都相同</li>
+<li><img src="pic/3-3.bmp" alt="" /></li>
 <li>整个流水线的效率：</li>
 <li><img src="pic/3-4.bmp" alt="" /></li>
 <li>对于线性流水且每段经过时间相等时，流水线的效率正比于吞吐率</li>
@@ -708,8 +702,7 @@
 </ul>
 <p><strong>流水线的相关处理（选择、填空）</strong></p>
 <ul>
-<li>
-<p>局部性相关（数据相关）：指令相关、主存数相关和寄存器组数相关</p>
+<li>局部性相关（数据相关）：指令相关、主存数相关和寄存器组数相关
 <ul>
 <li>处理：
 <ul>
@@ -724,8 +717,7 @@
 </li>
 </ul>
 </li>
-<li>
-<p>全局性相关（转移相关）：转移指令引起流水线中已被解释的指令作废</p>
+<li>全局性相关（转移相关）：转移指令引起流水线中已被解释的指令作废
 <ul>
 <li>处理：
 <ul>
@@ -752,25 +744,22 @@
 </li>
 </ul>
 </li>
-<li>
-<p>顺序/同步流动方式：任务流出流水线的顺序与流入顺序一致。</p>
+<li>顺序/同步流动方式：任务流出流水线的顺序与流入顺序一致。
 <ul>
 <li>实质：推后读</li>
 </ul>
 </li>
-<li>
-<p>异步流动方式：任务流出流水线的顺序与流入顺序不同。</p>
-</li>
-<li>
-<p>可能出现的新相关：</p>
+<li>异步流动方式：任务流出流水线的顺序与流入顺序不同。</li>
+<li>可能出现的新相关：
 <ul>
 <li>“写-写”相关：如：i，k指令都要写入同一单元，避免最终出现k先写入而i后写入</li>
 <li>“先读后写”相关：如：避免最终出现l的读操作落后于m的写操作。</li>
 </ul>
 </li>
-<li>
-<p>sum:采用总线式分布式控制管理，进一步优化处理标量流水处理机的局部相关问题
-<img src="pic/3-11.bmp" alt="" /></p>
+<li>sum:采用总线式分布式控制管理，进一步优化处理标量流水处理机的局部相关问题
+<ul>
+<li><img src="pic/3-11.bmp" alt="" /></li>
+</ul>
 </li>
 </ul>
 <p><strong>单功能非线性流水线的调度（简答）</strong></p>
@@ -786,12 +775,12 @@
 <li>根据预约表写出延迟禁止表F(预约表中所有同一行中任意两个“X”间的距离)</li>
 <li>由延迟禁止表形成冲突向量C（冲突向量长度等于禁止向量中的最大值，由高到低）</li>
 <li>由所有的向量图画出状态图（注意所有状态经过m*均可到达初始状态，m为禁止向量最大值）</li>
-<li>由状态图形成最佳调度方案（所有闭合回路均为调度周期策略，找出其中平均启动距离最小的）
-<img src="pic/3-13.bmp" alt="" />
-<img src="pic/3-14.bmp" alt="" />
-<img src="pic/3-17.bmp" alt="" />
-<img src="pic/3-15.bmp" alt="" />
-<img src="pic/3-16.bmp" alt="" /></li>
+<li>由状态图形成最佳调度方案（所有闭合回路均为调度周期策略，找出其中平均启动距离最小的）</li>
+<li><img src="pic/3-13.bmp" alt="" /></li>
+<li><img src="pic/3-14.bmp" alt="" /></li>
+<li><img src="pic/3-17.bmp" alt="" /></li>
+<li><img src="pic/3-15.bmp" alt="" /></li>
+<li><img src="pic/3-16.bmp" alt="" /></li>
 </ul>
 </li>
 </ul>
@@ -804,21 +793,25 @@
 <li>纵横处理：对向量分组，组内纵向、组间横向处理（寄存器—寄存器结构）</li>
 </ul>
 <p><strong>向量处理机并行操作条件（选择、填空）及采用链接技术的条件（选择）；</strong></p>
-<p>并行操作的条件：</p>
+<ul>
+<li>并行操作的条件：
 <ul>
 <li>不存在向量寄存器使用冲突（不存在RAW，WAR，WAW，RAR相关）</li>
 <li>不存在功能部件使用冲突（每种功能的部件一般只设置一个）</li>
 </ul>
-<p>采用链接技术的条件：</p>
+</li>
+<li>采用链接技术的条件：
 <ul>
 <li>不存在功能部件使用冲突</li>
 <li>不存在源向量冲突</li>
 <li>共用向量寄存器中向量长度、起始地址、步长均相等</li>
 <li>只有在先行指令产生第一结果分量的那个时钟方可链接，否则不行</li>
 </ul>
+</li>
+</ul>
 <p><strong>阵列处理机的定义（选择）；</strong></p>
-<p>多个处理单元（PU）按照一定方式互连，在同一个控制单元（CU）控制下，对各自的数据完成同一条指令规定的操作。</p>
 <ul>
+<li>多个处理单元（PU）按照一定方式互连，在同一个控制单元（CU）控制下，对各自的数据完成同一条指令规定的操作。</li>
 <li>分类
 <ul>
 <li>分部存储器</li>
@@ -862,7 +855,8 @@
 <li>交换方法：线路交换、包交换、线路交换与包交换组合。</li>
 <li>拓扑结构：互连网络入、出端可以连接的模式，有静态和动态两种。
 <ul>
-<li>动态网络：通过制定网络的开关单元状态可以重新配置
+<li>静态拓扑结构：两个节点间的链路是固定的</li>
+<li>动态拓扑结构：通过制定网络的开关单元状态可以重新配置
 <ul>
 <li>单级、多级。</li>
 <li>互连函数定义，二进制编码表示，N个节点的地址为<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span></li>
@@ -870,10 +864,12 @@
 </li>
 </ul>
 </li>
+<li>（后三个为互连网络的主要操作特征）</li>
 </ul>
-<p>（后三个为互连网络的主要操作特征）</p>
 <p><strong>操作方式（选择、填空）；</strong></p>
-<p>同步、异步、同步与异步组合。</p>
+<ul>
+<li>同步、异步、同步与异步组合。</li>
+</ul>
 <p><strong>单级互连网络及其函数（计算、选择）；</strong></p>
 <ul>
 <li>立方体单级网络： <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal">u</span><span class="mord mathnormal">b</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">...</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">...</span><span class="mord cjk_fallback">，</span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">...</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord overline"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6306em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.5506em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">...</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>
@@ -1082,13 +1078,13 @@
 <ul>
 <li><img src="pic/5-3.bmp" alt="" /></li>
 <li>低位交叉编址方式下，连续物理地址空间的数据被分散到各个分存储体中；</li>
-<li>适用于当前执行的多个进程基本不共享数据的情况，空间中的数据，如流水线、向量或阵列处理机</li>
+<li>适用于当前执行的多个进程基本共享数据的情况，空间中的数据，如流水线、向量或阵列处理机</li>
 </ul>
 </li>
 <li>高位交叉编址：块内顺序物理地址连续，总体也依次连续分布（即高位不变）
 <ul>
 <li><img src="pic/5-4.bmp" alt="" /></li>
-<li>适用于当前执行进程是共享同一集中连续物理地址，可将存储模块中的一定数量的页面分配给某进程</li>
+<li>适用于当前执行进程是不共享同一集中连续物理地址，可将存储模块中的一定数量的页面分配给某进程</li>
 <li>将放置处理机 i 执行进程要用到的绝大多数页面的那个存储器模块 i 称为是处理机 i 的本地存储器</li>
 </ul>
 </li>
@@ -1129,7 +1125,7 @@
 <ul>
 <li>写作废协议
 <ul>
-<li>当一个处理器对某数据项进行写入时，通过广播使其他Cache中所有对应该数据项的副本作废。</li>
+<li>当一个处理器第一次对某数据项进行写入时，通过广播使其他Cache中所有对应该数据项的副本作废。</li>
 </ul>
 </li>
 <li>写更新协议
